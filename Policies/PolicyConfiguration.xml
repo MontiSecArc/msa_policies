@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Policies xmlns="http://www.tbuning.de"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.tbuning.de PolicyConfiguration.xsd">
+    <Policy name="Unused Port" severity="WARNING" >
+        <GraphQueryInspection>
+            <Path>inspections/UnusedPortInspection.cyp</Path>
+            <ProblemDescription>Error!!</ProblemDescription>
+        </GraphQueryInspection>
+        <GraphQueryFix>
+            <Path>inspections/UnusedPortInspection.cyp</Path>
+            <FixDescription>Error!!</FixDescription>
+        </GraphQueryFix>
+    </Policy>
+</Policies>
