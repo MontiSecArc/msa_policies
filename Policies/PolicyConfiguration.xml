@@ -2,7 +2,7 @@
 <Policies xmlns="http://www.tbuning.de"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.tbuning.de PolicyConfiguration.xsd">
-    <Policy name="Unused Port" severity="WARNING" >
+    <Policy name="Unused Port" severity="LIKE_UNUSED_SYMBOL" >
         <GraphQueryInspection>
             <Path>inspections/UnusedPortInspection.cyp</Path>
             <ProblemDescription>Error!!</ProblemDescription>
