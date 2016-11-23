@@ -13,6 +13,7 @@
                         xmlns:tbun="http://www.tbuning.de"/>
             <xs:element type="tbun:GraphQueryFixType" name="GraphQueryFix" xmlns:tbun="http://www.tbuning.de"/>
         </xs:sequence>
+        <xs:attribute type="xs:string" name="id"/>
         <xs:attribute type="xs:string" name="name"/>
         <xs:attribute type="xs:string" name="severity"/>
     </xs:complexType>

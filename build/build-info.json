@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "MSA_Policies",
-  "number" : "1479902643097",
+  "number" : "1479914539094",
   "type" : "GRADLE",
   "buildAgent" : {
     "name" : "Gradle",
@@ -11,8 +11,8 @@
     "name" : "Gradle",
     "version" : "3.1"
   },
-  "started" : "2016-11-23T13:04:03.086+0100",
-  "durationMillis" : 628,
+  "started" : "2016-11-23T16:22:19.083+0100",
+  "durationMillis" : 611,
   "principal" : "thomasbuning",
   "artifactoryPrincipal" : "publisher",
   "artifactoryPluginVersion" : "Unknown",
@@ -30,17 +30,17 @@
     "buildNumbersNotToBeDiscarded" : [ ]
   },
   "modules" : [ {
-    "id" : ":MSA_Policies:0.7.8",
+    "id" : ":MSA_Policies:0.7.9",
     "artifacts" : [ {
       "type" : "jar",
-      "sha1" : "73eeded9dc78db2eab94cef287537a577362fe0f",
-      "md5" : "8412c47b1bed92c40fc25340f8810124",
-      "name" : "Policies-0.7.8.jar"
+      "sha1" : "5673e13b4ac48e553c6cc1513b65e974347b5273",
+      "md5" : "85bbe454845dcb97dbacdb6ede59da84",
+      "name" : "Policies-0.7.9.jar"
     }, {
       "type" : "pom",
-      "sha1" : "a9e62cd8bf0a3cf1b620dbcb5b0205cf597872d2",
-      "md5" : "6986384af3e26614a3c74efb35163b43",
-      "name" : "Policies-0.7.8.pom"
+      "sha1" : "da2951a59646a2a72ce21cc4f362f1583447ad86",
+      "md5" : "ecd9e50c0c68e5303ffa0c1e237d39c1",
+      "name" : "Policies-0.7.9.pom"
     } ],
     "excludedArtifacts" : [ ],
     "dependencies" : [ ]

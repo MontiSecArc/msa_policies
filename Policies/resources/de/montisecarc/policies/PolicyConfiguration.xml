@@ -2,14 +2,52 @@
 <Policies xmlns="http://www.tbuning.de"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.tbuning.de PolicyConfiguration.xsd">
-    <Policy name="Unused Port" severity="LIKE_UNUSED_SYMBOL">
+    <Policy id="UnusedPort" name="Unused Port" severity="LIKE_UNUSED_SYMBOL">
         <GraphQueryInspection>
             <Path>inspections/UnusedPortInspection.cyp</Path>
-            <ProblemDescription>Error!!</ProblemDescription>
+            <ProblemDescription>Port is unused</ProblemDescription>
+        </GraphQueryInspection>
+    </Policy>
+    <Policy id="ClientTampering" name="Client Tampering" severity="WEAK_WARNING">
+        <GraphQueryInspection>
+            <Path>inspections/ClientTampering.cyp</Path>
+            <ProblemDescription>Possible Client Tampering</ProblemDescription>
+        </GraphQueryInspection>
+    </Policy>
+    <Policy id="EncryptedPaths" name="Encrypted Paths" severity="WEAK_WARNING">
+        <GraphQueryInspection>
+            <Path>inspections/EncryptedPaths.cyp</Path>
+            <ProblemDescription>Encrypted Path with unencrypted parts</ProblemDescription>
+        </GraphQueryInspection>
+    </Policy>
+    <Policy id="EncryptStrongIdentity" name="Encrypt Strong and Weak Identity" severity="WEAK_WARNING">
+        <GraphQueryInspection>
+            <Path>inspections/EncryptStrongIdentity.cyp</Path>
+            <ProblemDescription>Identity link needs encryption</ProblemDescription>
         </GraphQueryInspection>
         <GraphQueryFix>
-            <Path>inspections/UnusedPortInspection.cyp</Path>
-            <FixDescription>Error!!</FixDescription>
+            <Path>fix/EncryptComponentInstanceIdentity.cyp</Path>
+            <FixDescription>Encrypt identity links</FixDescription>
+        </GraphQueryFix>
+    </Policy>
+    <Policy id="MultipleAccessPoints" name="Multiple Access Points" severity="INFORMATION">
+        <GraphQueryInspection>
+            <Path>inspections/MultipleAccessPoints.cyp</Path>
+            <ProblemDescription>Multiple Access Points to Component</ProblemDescription>
+        </GraphQueryInspection>
+        <GraphQueryFix>
+            <Path>fix/MultipleAccessPoints.cyp</Path>
+            <FixDescription>Introduce Single Access Point</FixDescription>
+        </GraphQueryFix>
+    </Policy>
+    <Policy id="UntrustedConnector" name="Untrusted Connector" severity="ERROR">
+        <GraphQueryInspection>
+            <Path>inspections/UntrustedConnector.cyp</Path>
+            <ProblemDescription>Connection is untrusted</ProblemDescription>
+        </GraphQueryInspection>
+        <GraphQueryFix>
+            <Path>fix/UntrustedConnector.cyp</Path>
+            <FixDescription>Encrypt Connector</FixDescription>
         </GraphQueryFix>
     </Policy>
 </Policies>
