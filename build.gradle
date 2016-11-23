@@ -19,20 +19,11 @@ apply plugin: "com.jfrog.artifactory"
 apply plugin: 'maven-publish'
 apply from: "artifactory.gradle"
 
-jar {
 
-    into("/fixes") {
-
-        from fileTree("Policies/fixes")
-    }
-
-    into("/") {
-
-        from file("Policies/PolicyConfiguration.xml")
-    }
-
-    into("/inspections") {
-
-        from fileTree("Policies/inspections")
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['Policies/resources']
+        }
     }
 }
