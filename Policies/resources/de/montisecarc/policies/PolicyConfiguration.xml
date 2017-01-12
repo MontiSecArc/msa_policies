@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+fix<?xml version="1.0" encoding="UTF-8" ?>
 <Policies xmlns="http://www.tbuning.de"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.tbuning.de PolicyConfiguration.xsd">
@@ -26,7 +26,7 @@
             <ProblemDescription>Identity link needs encryption</ProblemDescription>
         </GraphQueryInspection>
         <GraphQueryFix>
-            <Path>fix/EncryptComponentInstanceIdentity.cyp</Path>
+            <Path>fixes/EncryptComponentInstanceIdentity.cyp</Path>
             <FixDescription>Encrypt identity links</FixDescription>
         </GraphQueryFix>
     </Policy>
@@ -36,7 +36,7 @@
             <ProblemDescription>Multiple Access Points to Component</ProblemDescription>
         </GraphQueryInspection>
         <GraphQueryFix>
-            <Path>fix/MultipleAccessPoints.cyp</Path>
+            <Path>fixes/MultipleAccessPoints.cyp</Path>
             <FixDescription>Introduce Single Access Point</FixDescription>
         </GraphQueryFix>
     </Policy>
@@ -46,7 +46,7 @@
             <ProblemDescription>Connection is untrusted</ProblemDescription>
         </GraphQueryInspection>
         <GraphQueryFix>
-            <Path>fix/UntrustedConnector.cyp</Path>
+            <Path>fixes/UntrustedConnector.cyp</Path>
             <FixDescription>Encrypt Connector</FixDescription>
         </GraphQueryFix>
     </Policy>
