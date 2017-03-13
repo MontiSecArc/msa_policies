@@ -2,25 +2,31 @@
 <Policies xmlns="http://www.tbuning.de"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.tbuning.de PolicyConfiguration.xsd">
-    <Policy id="UnusedPort" name="Unused Port" severity="LIKE_UNUSED_SYMBOL">
-        <GraphQueryInspection>
-            <Path>inspections/UnusedPortInspection.cyp</Path>
-            <ProblemDescription>Port is unused</ProblemDescription>
-        </GraphQueryInspection>
-    </Policy>
-    <Policy id="ClientTampering" name="Client Tampering" severity="WEAK_WARNING">
+    <Policy id="ClientTampering" name="Client Tampering" severity="ERROR">
         <GraphQueryInspection>
             <Path>inspections/ClientTampering.cyp</Path>
             <ProblemDescription>Possible Client Tampering</ProblemDescription>
         </GraphQueryInspection>
     </Policy>
-    <Policy id="EncryptedPaths" name="Encrypted Paths" severity="WEAK_WARNING">
+    <Policy id="DirectAccess" name="Direct Access" severity="ERROR">
+        <GraphQueryInspection>
+            <Path>inspections/DirectAccess.cyp</Path>
+            <ProblemDescription>Direct Access</ProblemDescription>
+        </GraphQueryInspection>
+    </Policy>
+    <Policy id="AuthenticationOverUntrustedConnector" name="Authentication Over Untrusted Connector" severity="ERROR">
+        <GraphQueryInspection>
+            <Path>inspections/AuthenticationOverUntrustedConnector.cyp</Path>
+            <ProblemDescription>Authentication Over Untrusted Connector</ProblemDescription>
+        </GraphQueryInspection>
+    </Policy>
+    <Policy id="EncryptedPaths" name="Encrypted Paths" severity="ERROR">
         <GraphQueryInspection>
             <Path>inspections/EncryptedPaths.cyp</Path>
             <ProblemDescription>Encrypted Path with unencrypted parts</ProblemDescription>
         </GraphQueryInspection>
     </Policy>
-    <Policy id="EncryptStrongIdentity" name="Encrypt Strong and Weak Identity" severity="WEAK_WARNING">
+    <Policy id="EncryptStrongIdentity" name="Encrypt Strong and Weak Identity" severity="ERROR">
         <GraphQueryInspection>
             <Path>inspections/EncryptStrongIdentity.cyp</Path>
             <ProblemDescription>Identity link needs encryption</ProblemDescription>
