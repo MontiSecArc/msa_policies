@@ -1,3 +1,3 @@
-MATCH path = (p:Port)-->(:SecurityClass)<-[:WEAKER|CLEARANCE_FOR*2..8]-(c:Component)
-MATCH (p)-[:DECLARES_IN]->(c)
+MATCH (c:Component)<-[:DECLARES_IN]-(p:Port)
+  WHERE (c)-[:WEAKER|CLEARANCE_FOR*2..8]->(:SecurityClass)<--(p)
 RETURN c;

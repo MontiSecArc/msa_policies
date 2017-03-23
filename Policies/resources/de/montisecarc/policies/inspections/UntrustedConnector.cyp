@@ -2,7 +2,7 @@ match (t1:Trustlevel)-[:TRUST]->(:Component)-[:DECLARES_OUT]->(n:Port)-[r:UNENCR
 with t1.level as startTrustLevel,t2.level as stopTrustLevel,n,m,r
 match (m)-[:INGOING]->(:Instance)-[:CHILD_OF|INSTANCE_OF]->(env:Component)-[:PARENT_OF|:DEFINES]->(:Instance)-[:OUTGOING]->(n)
 with startTrustLevel, stopTrustLevel, r, env
-match (env:Component)-[:TRUST]->(t3:Trustlevel)
+match (env)-[:TRUST]->(t3:Trustlevel)
 with startTrustLevel, stopTrustLevel, r, t3.level as envTrustLevel
   where envTrustLevel < startTrustLevel or envTrustLevel < stopTrustLevel
 return r;
