@@ -3,31 +3,13 @@ This project bundles graph query inspections and graph query fixes that can be a
 
 # Integration with Gradle and Artifactory
 ```
-buildscript {
+allprojects {
     repositories {
-        maven {
-            url 'http://${ARTIFACTORY_HOST}/artifactory/plugins-release'
-        }
-    }
-}
-
-artifactory {
-    contextUrl = "http://${ARTIFACTORY_HOST}/artifactory"   //The base Artifactory URL if not overridden by the publisher/resolver
-    publish {
-        repository {
-            repoKey = 'intellij_plugins_snapshot_local'
-            maven = true
-        }
-    }
-    resolve {
-        repository {
-            repoKey = 'intellij_plugins_snapshot'
-            maven = true
-        }
+        maven { url 'https://jitpack.io' }
     }
 }
 
 dependencies {
-    compile 'de.monticore.lang.montisecarc:Policies:0.7+'
+    compile 'com.github.MontiSecArc:msa_policies:0.7.19'
 }
 ``` 
