@@ -1,1 +1,0 @@
-MATCH (n:Port) WHERE NOT ((n)-[:UNENCRYPTED|:ENCRYPTED]->() OR ()-[:UNENCRYPTED|:ENCRYPTED]->(n)) return n;
